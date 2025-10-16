@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENKKU MAKER SPACE</title>
+    <link rel="stylesheet" href="homestyle.css">
+    <link rel="stylesheet" href="fonts.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            position: relative;
+        }
+        .bg-iframe {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw;
+            height: 100vh;
+            border: none;
+            z-index: 0;
+        }
+        .logo {
+            text-align: center;
+            font-family: 'Pixellet', sans-serif;
+            font-size: 7rem;
+            font-weight: bold;
+            max-width: 75%;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: auto;
+            margin-right: auto;
+            animation: floatDown 1.2s ease-out;
+            z-index: 2;
+            position: relative;
+            background: linear-gradient(to bottom, #ffe066 20%, #ffd700 100%);
+            color: #ffd700;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow:
+                0 0 0 #ffae00,
+                2px 2px 0 #dd7e02,
+                -2px -2px 0 #ffe66b,
+                2px -2px 0 #be6109,
+                -2px 2px 0 #ffcc00,
+                0 4px 12px #ffffff;
+        }
+        @keyframes floatDown {
+            from { transform: translateY(-100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .btns {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-top: 50px;
+            margin-bottom: auto;
+            z-index: 2;
+            position: relative;
+        }
+        .btn-frame {
+            width: 300px;
+            height: 70px;
+            border: none;
+            background: transparent;
+            animation: floatUp 1.2s ease-out;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .btn-frame:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+        .btn-frame:nth-child(3) {
+            animation-delay: 0.5s;
+        }
+        @keyframes floatUp {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        #mainMap {
+            display: block;
+            margin: 0 auto;
+            z-index: 2;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="bg.HTML" class="bg-iframe"></iframe>
+    <div class="logo">ENKKU MAKER SPACE</div>
+    
+    <div class="btns">
+        <a href="EN17/mapindex.html" class="btn-frame" style="display:flex;align-items:center;justify-content:center;background:transparent;">
+            <img src="EN17/img/takeatour.png" alt="Take a Tour" style="width:100%;height:100%;object-fit:contain;">
+        </a>
+        <div class="credits">
+    made by<br>
+    นายปีย์วรา แซ่ตั้ง 683040419-3<br>
+    นางสาวสิริรัตน์ จุ้ยรอด 683040702-8<br>
+    
+</div>
+    </div>
+    <canvas id="mainMap"></canvas>
+</body>
+</html>

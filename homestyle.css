@@ -1,0 +1,19 @@
+
+.credits {
+    /* Basic Text Styling */
+    font-family: Pixellet, sans-serif;
+    font-size: 16px;
+    color: #dbab0e;
+
+    /* Centering the Block */
+    text-align: center; /* This centers the text inside the div */
+    width: 700px;      /* Give the div a width */
+    margin: 20px auto; /* This centers the div horizontally on the page */
+
+    /* Spacing between lines (can be tricky with <br>, but line-height helps) */
+    line-height: 1.5;
+
+    position:fixed;
+    bottom:10px;
+    z-index:1000;
+}

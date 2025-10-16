@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Pixel Button</title>
+    <link rel="stylesheet" href="fonts.css">
+    <style>
+        .btn {
+            font-family: 'TAGameboy', monospace;
+            font-size: 1.3rem;
+            width: 100%;
+            height: 100%;
+            background: #ffb347;
+            color: #4a2c17;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 4px 4px 0 #8b4513;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.2s;
+        }
+        .btn:active {
+            background: #ff9933;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn" id="mainBtn"></button>
+    <script>
+        const btn = document.getElementById('mainBtn');
+        if (location.hash === '#hotspot') {
+            btn.textContent = 'Hotspot';
+        } else {
+            btn.textContent = 'Take a Tour';
+            btn.onclick = () => {
+            window.top.location.href = 'EN17/index.html'};
+        }
+    </script>
+</body>
+</html>
